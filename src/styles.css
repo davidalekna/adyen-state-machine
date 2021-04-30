@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  padding: 25px;
+  outline: 2px dashed black;
+  user-select: none;
+  overflow: hidden;
+}
+
+.checkout[data-loading='true'] {
+  display: none;
+}
+
+.checkout_cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout_card-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.checkout_card-toolbar button {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: none;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.checkout_card-toolbar button[data-active='true']:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.checkout_card-toolbar button:active {
+  background-color: grey;
+}
+
+.checkout_card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 15px 0;
+  margin-left: 37px;
+}
+
+.checkout_card-body-button {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  color: brown;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.checkout_card-body-title {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.checkout_card-body-address_form {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.checkout_card {
+  outline: 1px solid violet;
+}
+
+.checkout_card-icon {
+  width: 34px;
+  height: 22px;
+  margin-right: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.checkout_card-title {
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.checkout_card-expiry {
+  font-size: 14px;
+}
+
+.checkout_card-component {
+  display: none;
+}
+
+.checkout_card-stored {
+  margin-left: 37px;
+}
+
+.checkout_footer {
+  margin-top: 20px;
+}
+
+.checkout_footer button {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.checkout_footer button:active {
+  background-color: grey;
+}
